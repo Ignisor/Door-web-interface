@@ -24,7 +24,7 @@ $(document).ready(function(){
                     function() {
                         btn.css("background-color", "");
                         btn.text("Open");
-                    }, 200);
+                    }, 500);
             }
         });
     });
