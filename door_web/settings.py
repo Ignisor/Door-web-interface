@@ -122,7 +122,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # IoT settings
-DOOR_MODULE_URL = 'http://192.168.1.62/'
+DOOR_MODULE_URL = 'http://192.168.1.133/'
 
 
 try:
