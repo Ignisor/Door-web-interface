@@ -1,31 +1,41 @@
-$(document).ready(function(){
-    $('#open_button').click(function(){
-        var btn = $(this);
-        btn.text('...');
+(function() {
+    'use strict';
 
-        $.post("/open/", {},
-        function(data, status){
-            if (status == "success" && data.success) {
-                btn.css("background-color", "#43A047");
-                btn.text("Opened");
-                btn.attr("disabled", true);
+    $(document).ready(function(){
+        $('#open_button').click(function(){
+            var btn = $(this);
+            btn.text('...');
 
-                setTimeout(
-                    function() {
-                        btn.css("background-color", "");
-                        btn.text("Open");
-                        btn.removeAttr("disabled");
-                    }, 5000);
-            }
-            else {
-                btn.css("background-color", "#E53935");
+            $.post("/open/", {},
+                function(data, status){
+                    if (status == "success" && data.success) {
+                        btn.css("background-color", "#43A047");
+                        btn.text("Opened");
+                        btn.attr("disabled", true);
 
-                setTimeout(
-                    function() {
-                        btn.css("background-color", "");
-                        btn.text("Open");
-                    }, 500);
-            }
+                        setTimeout(
+                            function() {
+                                btn.css("background-color", "");
+                                btn.text("Open");
+                                btn.removeAttr("disabled");
+                            }, 5000);
+                    }
+                    else {
+                        btn.css("background-color", "#E53935");
+
+                        setTimeout(
+                            function() {
+                                btn.css("background-color", "");
+                                btn.text("Open");
+                            }, 500);
+                    }
+                });
         });
     });
-});
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('./service-worker.js')
+            .then(function() { console.log('Service Worker Registered'); });
+    }
+})();
