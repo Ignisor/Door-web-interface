@@ -1,5 +1,5 @@
 var dataCacheName = 'door-v1';
-var cacheName = 'Door-web-interface-door-2';
+var cacheName = 'Door-web-interface-door-1';
 var filesToCache = [
   '/',
   '/templates/base.html',
