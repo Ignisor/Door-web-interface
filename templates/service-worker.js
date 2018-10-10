@@ -1,10 +1,14 @@
 var dataCacheName = 'door-v1';
 var cacheName = 'Door-web-interface-door-1';
 var filesToCache = [
-  '/'
-  // '/index.html',
-  // 'static/js/door/button.js',
-  // 'static/css/door/custom.css'
+  '/',
+  'static/manifest.json',
+  'static/js/popper.min.js',
+  'static/js/jquery.min.js',
+  'static/js/door/button.js',
+  'static/js/bootstrap.min.js',
+  'static/css/bootstrap.min.css',
+  'static/css/door/custom.css'
 ];
 
 self.addEventListener('install', function(e) {

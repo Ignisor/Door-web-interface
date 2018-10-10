@@ -5,27 +5,28 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Door PWA">
     <link rel="apple-touch-icon" href="{% static 'images/icons/icon-152x152.png' %}">
     <meta name="msapplication-TileImage" content="{% static 'images/icons/icon-144x144.png' %}">
-    <meta name="theme-color" content="#00796B"/>
     <meta name="msapplication-TileColor" content="#2F3BA2">
+    <meta name="theme-color" content="#00796B"/>
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/ico" sizes="16x16">
     <link rel="manifest" href="{% static 'manifest.json' %}">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block title %}
         <title>GoWombat Door</title>
     {% endblock %}
     {% block css %}
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/door/custom.css' %}">
     {% endblock %}
     {% block js %}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
     {% endblock %}
 </head>
 
